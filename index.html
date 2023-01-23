@@ -10,6 +10,18 @@
 			 flex-direction: column;
 			 flex-wrap: wrap;
 			}
+			
+			verticle {
+				display: flex;
+				flex-direction: row;
+			}
+			
+			floatpart {
+			 flex: 1;
+			 boarder: 2px solid black;
+			 margin: 10px;
+			 width: 50%;
+			}
 
 			section {
 			 display: flex;
@@ -21,7 +33,7 @@
 			.menu {
 			 display: flex;
 			 flex-direction: column;
-			 alistitemgn-items: center;
+			 align-items: center;
 			 justify-content: space-around;
 			}
 			
@@ -29,6 +41,7 @@
 			main {
 			 width: 60%;
 			}
+			
 			.menu {
 			 width: 20%;
 			 padding: 15px;
@@ -36,17 +49,31 @@
 			 float: left;
 			 display: block;
 			 }
-			
+			 
 			body {
 			 background-color: #737274;
 			}
+			
 			.main1 {
 			 background-color: tan;
 			}
+			
 			.main2 {
 			 background-color: #BFAB84;
 			}
-
+			
+			article {
+			 float: right;
+			}
+			
+			h2 {
+			 float: left;
+			}
+			
+			.icon {
+				width: 25%;
+			}
+			
 			#intro {
 			 background-color: #F1EDD6;
 			}
@@ -54,17 +81,18 @@
 			#menuitem {
 			 background-color: #F1EDD6;
 			 padding: 15px 25px;
-			 text-alistitemgn: center;
+			 text-align: center;
 			 text-decoration: none;
 			 display: block;
 			}
 			
-			.lastlistitem {
+			.lastli {
 			 padding-bottom: 10px;
 			}
 			
 			footer{
-			 background-color: #F1EDD6;
+			 background-color: tan;
+			 width: 100%;
 			}
 			
 			section {
@@ -72,6 +100,17 @@
 			 padding-right: 1em;
 			}
 			
+			.endborder {
+				float: left;
+				width: 30%;
+				padding: 5px;
+			}
+			.endbordershell {
+				content: after;
+				clear: both;
+				display: table;
+			}
+
 			/* Size specific alterations */
 			@media screen and (max-width: 600px) {
 			  /* for mobile phones */
@@ -81,7 +120,7 @@
 			 .menu {
 			  display: flex;
 			  flex-direction: row;
-			  alistitemgn-items: center;
+			  align-items: center;
 			  justify-content: space-around;
 			 }
 			 .menu, .main {
@@ -95,7 +134,7 @@
 			@media screen and (min-width: 900px) {
 			/* for desktop monitors */
 			 .footer{
-			  background-color: #581845;
+			  background: #581845;
 			 }
 			 #intro{
 			  background-color: tan;
@@ -112,43 +151,67 @@
 		</menu>
 		<main>
 			<section class="main1" id="intro">
+				<article>Hello! I'm software engineering student with a background in hands-on IT and customer service.</article>
 				<img src="assets/img/smallbadheadshotsmaller.jpg" alt="In front of a white background stands a white woman with short red hair in purple zip up jacket with black shirt underneath the jacket" style="width:254px;height:257px;" float: right;>
-				<article float: left;>Hello! I'm software engineering student with a background in hands-on IT and customer service.</article>	
 			</section>
 			<section class="main2">
 				<h2 id="bio">About Me</h2>
-				<article> TODO: about me
-				</article>
+				<article> TODO: about me </article>
 			</section>
 			<section class="main1">
 				<h2 id="Skills">Skills</h2>
-				<article>TODO: Skill listitemst</article>
-				<notnumberdlistitemst class="verticle">
-					<listitem class="outerlistitemst">Walgreens</listitem>
-						<notnumberdlistitemst>
-							<listitem>At Walgreens I worked in the photo department then was promoted to shift lead after moving to Kentucky.</listitem>
-							<listitem>I was the go-to person for troubleshooting problems with hardware and software at both jobs.</listitem>
-							<listitem class="lastlistitem">There were mnotnumberdlistitemsttiple times I was called to assist Pharmacy during stressfnotnumberdlistitemst events.</listitem>
-						</notnumberdlistitemst>
-					<listitem class="outerlistitemst">Prepress Company</listitem>
-						<notnumberdlistitemst>
-							<listitem>Since my hiring at Prepress Company I've been able to free up a lot of my boss's time by indepently handlistitemng many small issues.</listitem>
-							<listitem>I've created documentation of our network security set up for both internal and external use.</listitem>
-							<listitem class="lastlistitem">I research new comapanies or software when we are deciding to switch what we use.</listitem>
-				</notnumberdlistitemst>
+				<ul class="verticle">
+					<floatpart>
+						<picture>
+							<img class="icon" src="assets/img/customer-service-g7032aa955_640.png" alt="A round blue circle behind two white cartoons of two people shaking hands.">
+						</picture>
+					</floatpart>
+					<floatpart>
+						<li class="outerlist">Customer Service</li>
+							<ul>
+								<li>At Walgreens I worked in the photo department then was promoted to shift lead after moving to Kentucky.</li>
+								<li>I was the go-to person for troubleshooting problems with hardware and software at both jobs.</li>
+								<li class="lastli">There were multiple times I was called to assist Pharmacy during stressful events.</li>
+							</ul>
+					</floatpart>
+					<floatpart>
+						<picture>
+							<img class="icon" src="assets/img/page-gce0f8c813_640.png" alt="A computer graphic of an indistinct document with grey lines of varying darkness.">
+						</picture>
+					</floatpart>
+					<floatpart>
+						<li class="outerlist">Documentation & Troubleshooting</li>
+							<ul>
+								<li>I am first in line to diagnose and troubleshoot problems big and small at work, something that knowledge of programmming has been very helpful with.</li>
+								<li>I've created documentation of our network security set up for both internal and external use.</li>
+								<li class="lastli">I research new comapanies or software when we are deciding to switch what we use.</li>
+					</floatpart>
+				</ul>
 			</section>
 			<section class="main2">
 				<h2 id="Hobbies">Off-Hours</h2>
 				<picture>
-					<img src="assets/img/colored-pencils-g9c5bec6d2_1920_cropped.jpg" alt="Several sharpened colored pencils on a white background with tips facing up" width="75%">
+					<img src="assets/img/colored-pencils-g9c5bec6d2_1920_cropped.jpg" alt="A photo of several sharpened colored pencils on a white background with tips facing up" width="75%">
 				</picture>
-				<article>In my free time I enjoy dabblistitemng with drawing of both paper and digital kind. I also enjoy swapping recipes with my friends, the occasional get together for board games of various stripes, and video games. Currently I am learning to play the piano as well. I generally enjoy many of my hobbies (video games and drawing) while watching documentaries or youtube channels listitemke Technology Connections
+				<article>In my free time I enjoy dabbling with drawing of both paper and digital kind. I also enjoy swapping recipes with my friends, the occasional get together for board games of various types, and video games. Currently I am learning to play the piano as well. I generally enjoy many of my hobbies (video games and drawing) while watching documentaries or youtube channels like Technology Connections
 				or Kurzgesagt.</article>
+				<div class="endbordershell">
+				<picture class="endborder">
+					<img class="border" src="assets/img/board-game-geb6a1dbe8_640.jpg" alt="A photo of game board with various game pieces on it.">
+				</picture>
+				<picture class="endborder">
+					<img class="border" src="assets/img/piano-g6b4f842c3_640.jpg" alt="A photo of small section piano keys.">
+				</picture>
+				<picture class="endborder">
+					<img class="border" src="assets/img/dice-g755bf7de6_640.jpg" alt="A photo of dice of different colors, shapes, and number of sides.">
+				</picture>
+				<class="endbordershell">
 			</section>
 			<section class="main1">
-				<h2 id="Contact Me">Contact Me</h2>
-				<h3>Sorry! This section of the website isn't working yet!
-				</h3>
+				<h2 id="Contact Me">Contact Me</h2><br>
+			
+				<article>Sorry! This section of the website isn't working yet!</article><br>
+
 				<form>
 					<label for="fname">First Name:</label><br>
 					<input type="text" id="fname" name="Fname"><br>
@@ -165,6 +228,6 @@
 		</main>
 	</body>
 	<footer>
-		<article>Picture of colored pencils retrieved from <a href="https://pixabay.com/">pixaby.com</a> in complistitemance with their terms and conditions.</article>
+		<article>I can be contacted at <email>pamela.lynn.pepper@gmail.com</email>. Images beside my own retrieved from <a href="https://pixabay.com/">pixaby.com</a> in compliance with their terms and conditions.</article>
 	</footer>
 </html>
