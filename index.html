@@ -3,6 +3,78 @@
 	<head>
 		<title>Pepper Pepper Pepper</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			section {
+			 display: flex;
+			 flex: 200;
+			 flex-direction: row;
+			 flex-wrap: wrap;
+			}
+
+			div {
+			 flex: 1;
+			}
+			
+			.menu {
+			 display: flex;
+			 flex-direction: row;
+			 align-items: center;
+			 justify-content: space-around;
+			}
+			
+			/* Non-Flex stuff */
+			body {
+			 background-color: #737274;
+			}
+			.section1 {
+			 background-color: tan;
+			}
+			.section2 {
+			 background-color: #BFAB84;
+			}
+			
+			#menuitem {
+			 background-color: #F1EDD6;
+			 padding: 15px 25px;
+			 text-align: center;
+			 text-decoration: none;
+			}
+			
+			.lastli {
+			 padding-bottom: 10px;
+			}
+			
+			footer{
+			 /* TODO: make text smaller */
+			}
+			
+			div {
+			 padding-left: 1em;
+			 padding-right: 1em;
+			}
+			
+			/* Size specific alterations */
+			@media screen and (max-width: 600px) {
+			  /* for mobile phones */
+			  body {
+			   background-color: #C1DBAE;
+			  }
+			}
+			
+			@media screen and (max-width: 900px) and (min-width:600px){
+			/* for tablets */
+			 #intro {
+			  /* TODO: change background color */
+			 }
+			}
+			
+			@media screen and (min-width: 900px) {
+			/* for desktop monitors */
+			 .footer{
+			  background-color: green;
+			 }
+			}
+		</style>
 	</head>
 	<body>
 		<div class="menu">
@@ -11,58 +83,61 @@
 				<div class="menuitem"><a href="Hobbies">Off-Hours</a></div>
 				<div class="menuitem"><a href="Contact Me">Contact Me</a></div>
 		</div>
-		<div class="section1" id="intro">
-			<article>A software engineering student with a background in customer service and in-house it.
-			</article>
-				<img src="assets/img/smallbadheadshotsmaller.jpg" alt="white woman with short red hair in purple zip up jacket with black shirt underneath standing against a plain off white background" style="width:254px;height:257px;">
-			
-		</div>
-		<div class="section2">
-			<h2 id="bio">About Me</h2>
-			<article> TODO: about me
-			</article>
-		</div>
-		<div class="section1">
-			<h2 id="Skills">Skills</h2>
-			<article>TODO: Skill list</article>
-			<ul class="verticle">
-				<li>Walgreens</li>
-					<ul>
-						<li>At Walgreens I worked in the photo department then was promoted to shift lead after moving to Kentucky.</li>
-						<li>I was the go-to person for troubleshooting problems with hardware and software at both jobs.</li>
-						<li>There were multiple times I was called to assist Pharmacy during stressful events.</li>
-					</ul>
-				<li>Prepress Company</li>
-					<ul>
-						<li>Since my hiring at Prepress Company I've been able to free up a lot of my boss's time by indepently handling many small issues.</li>
-						<li>I've created documentation of our network security set up for both internal and external use.</li>
-						<li>I research new comapanies or software when we are deciding to switch what we use.</li>
-			</ul>
-		</div>
-		<div class="section2">
-			<h2 id="Hobbies">Off-Hours</h2>
-			<picture>
-				<img src="images/colored-pencils-g9c5bec6d2_1920" alt="sharpened colored pencils on a white background with tips facing up">
-			</picture>
-			<article>In my free time I enjoy dabbling with sketching pencils, pixel art, and occasionally digital art. I also enjoy swapping recipes with my friends, the occasional get together for board games of various stripes, and video games. Currently I am learning to play the piano as well. I generally enjoy many of my hobbies (video games and drawing) while watching documentaries or youtube channels like Technology Connections
-			or Kurzgesagt.</article>
-		</div>
-		<div class="section1">
-			<h2 id="Contact Me">Contact Me</h2>
-			<form>
-				<label for="fname">First Name:</label><br>
-				<input type="text" id="fname" name="Fname" value="First Name Here"><br>
-				<label for="lnname">Last Name:</label><br>
-				<input type="text" id="lname" name="Lname" value="Last Name Here"><br>
-				<label for="semail">Email Address:</label><br>
-				<input type="email" id="semail" name="semail" value="youremail@here.com"><br>
-				<label for="subject">Email Subject:</label><br>
-				<input type="text" id="subject" name="Subject" value="Subject line Here"><br>
-				<label for="message">Email Message:</label>
-				<input type="text" id="message" name="Message" value="Type your message here."><br><br>
-			</form>
-			<article>Sorry! This portion of the website isn't working yet!
-			</article>
-		</div>
+		<section>
+			<div class="section1" id="intro">
+				<img src="assets/img/smallbadheadshotsmaller.jpg" alt="In front of a white background stands a white woman with short red hair in purple zip up jacket with black shirt underneath the jacket" style="width:254px;height:257px;" float: right;>
+				<article float: left;>Hello! I'm software engineering student with a background in hands-on IT and customer service.</article>	
+			</div>
+			<div class="section2">
+				<h2 id="bio">About Me</h2>
+				<article> TODO: about me
+				</article>
+			</div>
+			<div class="section1">
+				<h2 id="Skills">Skills</h2>
+				<article>TODO: Skill list</article>
+				<ul class="verticle">
+					<li class="outerlist">Walgreens</li>
+						<ul>
+							<li>At Walgreens I worked in the photo department then was promoted to shift lead after moving to Kentucky.</li>
+							<li>I was the go-to person for troubleshooting problems with hardware and software at both jobs.</li>
+							<li class="lastli">There were multiple times I was called to assist Pharmacy during stressful events.</li>
+						</ul>
+					<li class="outerlist">Prepress Company</li>
+						<ul>
+							<li>Since my hiring at Prepress Company I've been able to free up a lot of my boss's time by indepently handling many small issues.</li>
+							<li>I've created documentation of our network security set up for both internal and external use.</li>
+							<li class="lastli">I research new comapanies or software when we are deciding to switch what we use.</li>
+				</ul>
+			</div>
+			<div class="section2">
+				<h2 id="Hobbies">Off-Hours</h2>
+				<picture>
+					<img src="assets/img/colored-pencils-g9c5bec6d2_1920_cropped.jpg" alt="Several sharpened colored pencils on a white background with tips facing up" width="75%">
+				</picture>
+				<article>In my free time I enjoy dabbling with drawing of both paper and digital kind. I also enjoy swapping recipes with my friends, the occasional get together for board games of various stripes, and video games. Currently I am learning to play the piano as well. I generally enjoy many of my hobbies (video games and drawing) while watching documentaries or youtube channels like Technology Connections
+				or Kurzgesagt.</article>
+			</div>
+			<div class="section1">
+				<h2 id="Contact Me">Contact Me</h2>
+				<h3>Sorry! This portion of the website isn't working yet!
+				</h3>
+				<form>
+					<label for="fname">First Name:</label><br>
+					<input type="text" id="fname" name="Fname"><br>
+					<label for="lnname">Last Name:</label><br>
+					<input type="text" id="lname" name="Lname"><br>
+					<label for="semail">Email Address:</label><br>
+					<input type="email" id="semail" name="semail"><br>
+					<label for="subject">Email Subject:</label><br>
+					<input type="text" id="subject" name="Subject"><br>
+					<label for="message">Email Message:</label><br>
+					<input type="text" id="message" name="Message"><br><br>
+				</form>
+			</div>
+		</section>
 	</body>
+	<footer>
+		<article>Picture of colored pencils retrieved from pixby.com in compliance with their terms and conditions.</article>
+	</footer>
 </html>
